@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">قسم المنتجات - ترند كارد</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- رأس الصفحة -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><a href="index.html">TREND CARD</a></h1>
+                <p>نرند دگارد</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="#contact">اتصل بنا</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- قسم المنتجات -->
+    <main>
+        <section class="products-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="section-name">اسم القسم</h2>
+                    <p id="section-desc">وصف القسم</p>
+                </div>
+
+                <!-- أدوات التحكم -->
+                <div class="controls">
+                    <div class="search-box">
+                        <input type="text" id="search-input" placeholder="ابحث عن منتج...">
+                        <button id="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="sort-box">
+                        <label for="sort-select">ترتيب حسب:</label>
+                        <select id="sort-select">
+                            <option value="default">الترتيب الافتراضي</option>
+                            <option value="number-asc">رقم المنتج (من الأصغر للأكبر)</option>
+                            <option value="number-desc">رقم المنتج (من الأكبر للأصغر)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- شبكة المنتجات -->
+                <div class="products-grid" id="products-container">
+                    <!-- سيتم تعبئة المنتجات بواسطة JavaScript -->
+                </div>
+
+                <!-- رسالة عدم العثور على منتجات -->
+                <div class="no-results" id="no-results">
+                    <p>لم يتم العثور على منتجات تطابق بحثك.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- وصف يويو (سيظهر فقط لقسم يويو) -->
+        <section class="yoyo-description" id="yoyo-description">
+            <div class="container">
+                <h3>شحن يويو YOYO</h3>
+                <p>شحن يويو YOYO بسهولة وأمان مع ترند كارد تطبيق يويو هو منصة ترفيهية للدردشة والتواصل الاجتماعي، ويمكنك الآن شراء وشحن رصيد يويو مباشرة بخطوات بسيطة وسريعة على مدار الساعة.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- تذييل الصفحة -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>ترند كارد</h3>
+                    <p>Trend Card</p>
+                </div>
+                <div class="contact-info">
+                    <h4>للتواصل والاستفسار</h4>
+                    <p><i class="fab fa-whatsapp"></i> واتساب: +967735670700</p>
+                    <p><i class="far fa-clock"></i> متاحون 24 ساعة</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2023 ترند كارد - جميع الحقوق محفوظة</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- نافذة المنتج العائمة -->
+    <div class="modal-overlay" id="product-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">تفاصيل المنتج</h3>
+                <button class="close-modal" id="close-modal">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- سيتم تعبئة المحتوى بواسطة JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- تحميل البيانات والوظائف -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // تهيئة صفحة القسم
+        document.addEventListener('DOMContentLoaded', function() {
+            loadSectionPage();
+            setupMobileMenu();
+        });
+    </script>
+</body>
+</html>

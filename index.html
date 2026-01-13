@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ترند كارد - Trend Card</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- رأس الصفحة -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>TREND CARD</h1>
+                <p>نرند دگارد</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">الرئيسية</a></li>
+                    <li><a href="#contact">اتصل بنا</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- القسم الرئيسي -->
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>أفضل منصة لشراء البطاقات والشحنات</h2>
+                    <p>شحن تطبيقات وألعاب وبطاقات هدايا بأسعار منافسة وسرعة في التنفيذ</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- أقسام الموقع -->
+        <section class="sections">
+            <div class="container">
+                <h2 class="section-title">أقسامنا</h2>
+                <div class="sections-grid" id="sections-container">
+                    <!-- سيتم تعبئة الأقسام بواسطة JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- حول ترند كارد -->
+        <section class="about">
+            <div class="container">
+                <h2 class="section-title">عن ترند كارد</h2>
+                <div class="about-content">
+                    <p>منصة متخصصة في شحن التطبيقات والألعاب وبطاقات الهدايا بأمان وسهولة. نقدم خدمة سريعة على مدار الساعة بأسعار تنافسية.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-bolt"></i>
+                            <h3>شحن فوري</h3>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>آمن ومضمون</h3>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-headset"></i>
+                            <h3>دعم فني 24/7</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- تذييل الصفحة -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>ترند كارد</h3>
+                    <p>Trend Card</p>
+                </div>
+                <div class="contact-info">
+                    <h4>للتواصل والاستفسار</h4>
+                    <p><i class="fab fa-whatsapp"></i> واتساب: +967735670700</p>
+                    <p><i class="far fa-clock"></i> متاحون 24 ساعة</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2023 ترند كارد - جميع الحقوق محفوظة</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- نافذة المنتج العائمة -->
+    <div class="modal-overlay" id="product-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">تفاصيل المنتج</h3>
+                <button class="close-modal" id="close-modal">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- سيتم تعبئة المحتوى بواسطة JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- تحميل البيانات والوظائف -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // تهيئة الصفحة الرئيسية
+        document.addEventListener('DOMContentLoaded', function() {
+            loadSections();
+            setupMobileMenu();
+        });
+    </script>
+</body>
+</html>
