@@ -2,267 +2,104 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title id="page-title">قسم المنتجات - ترند كارد</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💎</text></svg>">
 </head>
 <body>
-    <!-- شريط التحميل -->
+    <!-- شاشة التحميل -->
     <div class="loading-screen" id="loading-screen">
         <div class="loader">
             <div class="loader-circle"></div>
-            <p>جاري التحميل...</p>
+            <p class="loader-text">جاري التحميل...</p>
         </div>
     </div>
 
-    <!-- رأس الصفحة -->
-    <header class="header">
+    <!-- شريط التنقل العلوي -->
+    <header class="header" id="header">
         <div class="container">
-            <div class="header-content">
+            <div class="header-inner">
+                <!-- الشعار -->
                 <div class="logo">
-                    <div class="logo-icon">
-                        <i class="fas fa-gem"></i>
-                    </div>
-                    <div class="logo-text">
-                        <h1 class="logo-title"><a href="index.html">TREND CARD</a></h1>
-                        <p class="logo-subtitle">نرند دگارد</p>
-                    </div>
-                </div>
-                
-                <nav class="navbar">
-                    <ul class="nav-menu">
-                        <li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-home"></i> الرئيسية</a></li>
-                        <li class="nav-item"><a href="index.html#features" class="nav-link"><i class="fas fa-star"></i> المميزات</a></li>
-                        <li class="nav-item"><a href="#contact" class="nav-link"><i class="fas fa-phone-alt"></i> اتصل بنا</a></li>
-                    </ul>
-                    
-                    <div class="theme-toggle">
-                        <i class="fas fa-moon"></i>
-                    </div>
-                    
-                    <div class="mobile-menu-btn">
-                        <div class="hamburger">
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                    <a href="index.html" class="logo-link">
+                        <div class="logo-icon">
+                            <i class="fas fa-gem"></i>
                         </div>
-                    </div>
+                        <div class="logo-text">
+                            <h1 class="logo-title">TREND CARD</h1>
+                            <span class="logo-subtitle">نرند دگارد</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- قائمة التنقل -->
+                <nav class="nav" id="nav">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-home"></i><span>الرئيسية</span></a></li>
+                        <li class="nav-item"><a href="index.html#sections" class="nav-link"><i class="fas fa-th-large"></i><span>الأقسام</span></a></li>
+                        <li class="nav-item"><a href="index.html#features" class="nav-link"><i class="fas fa-star"></i><span>المميزات</span></a></li>
+                        <li class="nav-item"><a href="#contact" class="nav-link"><i class="fas fa-phone-alt"></i><span>اتصل بنا</span></a></li>
+                    </ul>
                 </nav>
+
+                <!-- أزرار التحكم -->
+                <div class="header-controls">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="تبديل المظهر">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    
+                    <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="فتح القائمة">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- قسم المنتجات -->
-    <main class="products-page">
+    <!-- المحتوى الرئيسي -->
+    <main class="main-content">
         <!-- عنوان القسم -->
         <section class="page-header">
             <div class="container">
                 <div class="page-header-content">
-                    <div class="breadcrumb">
-                        <a href="index.html">الرئيسية</a>
-                        <i class="fas fa-chevron-left"></i>
-                        <span id="breadcrumb-section">القسم</span>
+                    <!-- مسار التنقل -->
+                    <nav class="breadcrumb" aria-label="مسار التنقل">
+                        <ol class="breadcrumb-list">
+                            <li class="breadcrumb-item">
+                                <a href="index.html" class="breadcrumb-link">
+                                    <i class="fas fa-home"></i>
+                                    الرئيسية
+                                </a>
+                            </li>
+                            <li class="breadcrumb-separator">
+                                <i class="fas fa-chevron-left"></i>
+                            </li>
+                            <li class="breadcrumb-item active">
+                                <span id="breadcrumb-section">القسم</span>
+                            </li>
+                        </ol>
+                    </nav>
+                    
+                    <!-- عنوان القسم -->
+                    <div class="page-title-container">
+                        <h1 class="page-title" id="section-name">اسم القسم</h1>
+                        <p class="page-subtitle" id="section-desc">وصف القسم</p>
                     </div>
                     
-                    <h1 id="section-name" class="page-title">اسم القسم</h1>
-                    <p id="section-desc" class="page-subtitle">وصف القسم</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- أدوات التحكم -->
-        <section class="products-controls">
-            <div class="container">
-                <div class="controls-container">
-                    <div class="search-container">
-                        <div class="search-box">
-                            <input type="text" id="search-input" placeholder="ابحث عن منتج...">
-                            <button id="search-btn">
-                                <i class="fas fa-search"></i>
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <div class="sort-container">
-                        <div class="sort-box">
-                            <label for="sort-select">
-                                <i class="fas fa-sort-amount-down"></i>
-                                ترتيب حسب:
-                            </label>
-                            <select id="sort-select">
-                                <option value="default">الترتيب الافتراضي</option>
-                                <option value="number-asc">رقم المنتج (تصاعدي)</option>
-                                <option value="number-desc">رقم المنتج (تنازلي)</option>
-                                <option value="price-asc">السعر (من الأقل للأعلى)</option>
-                                <option value="price-desc">السعر (من الأعلى للأقل)</option>
-                            </select>
-                        </div>
-                        
-                        <div class="view-toggle">
-                            <button class="view-btn active" data-view="grid">
-                                <i class="fas fa-th"></i>
-                            </button>
-                            <button class="view-btn" data-view="list">
-                                <i class="fas fa-list"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- شبكة المنتجات -->
-        <section class="products-section">
-            <div class="container">
-                <div class="products-container" id="products-container">
-                    <!-- سيتم تعبئة المنتجات بواسطة JavaScript -->
-                </div>
-                
-                <!-- رسالة عدم العثور على منتجات -->
-                <div class="no-results" id="no-results">
-                    <div class="no-results-icon">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <h3>لم يتم العثور على منتجات</h3>
-                    <p>لم نتمكن من العثور على منتجات تطابق بحثك. حاول البحث باستخدام مصطلحات أخرى.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- وصف يويو (سيظهر فقط لقسم يويو) -->
-        <section class="product-description" id="yoyo-description">
-            <div class="container">
-                <div class="description-card">
-                    <div class="description-header">
-                        <h3><i class="fas fa-info-circle"></i> شحن يويو YOYO</h3>
-                    </div>
-                    <div class="description-content">
-                        <p>شحن يويو YOYO بسهولة وأمان مع ترند كارد تطبيق يويو هو منصة ترفيهية للدردشة والتواصل الاجتماعي، ويمكنك الآن شراء وشحن رصيد يويو مباشرة بخطوات بسيطة وسريعة على مدار الساعة.</p>
-                        
-                        <div class="description-features">
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>شحن فوري بعد التأكيد</span>
+                    <!-- إحصاءات القسم -->
+                    <div class="page-stats">
+                        <div class="page-stat">
+                            <div class="stat-icon">
+                                <i class="fas fa-box"></i>
                             </div>
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>أسعار تنافسية في السوق</span>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>دعم فني متخصص</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- تذييل الصفحة -->
-    <footer class="footer" id="contact">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-logo">
-                        <div class="logo-icon">
-                            <i class="fas fa-gem"></i>
-                        </div>
-                        <div class="footer-logo-text">
-                            <h3>ترند كارد</h3>
-                            <p>Trend Card</p>
-                        </div>
-                    </div>
-                    <p class="footer-description">منصة رائدة في شحن الرصيد والبطاقات الرقمية بسرعة وأمان</p>
-                    
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h4 class="footer-title">روابط سريعة</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html">الرئيسية</a></li>
-                        <li><a href="index.html#sections">الأقسام</a></li>
-                        <li><a href="index.html#features">المميزات</a></li>
-                        <li><a href="#contact">اتصل بنا</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4 class="footer-title">اتصل بنا</h4>
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fab fa-whatsapp"></i>
-                            <div>
-                                <p>واتساب للطلبات</p>
-                                <a href="https://wa.me/967735670700" class="contact-link">+967735670700</a>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <i class="far fa-clock"></i>
-                            <div>
-                                <p>أوقات العمل</p>
-                                <span>24 ساعة / 7 أيام</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p class="copyright">© 2023 ترند كارد - Trend Card. جميع الحقوق محفوظة.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- نافذة المنتج العائمة -->
-    <div class="modal-overlay" id="product-modal">
-        <div class="modal-container">
-            <div class="modal-header">
-                <h3 id="modal-title">تفاصيل المنتج</h3>
-                <button class="close-modal" id="close-modal">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div class="modal-body" id="modal-body">
-                <!-- سيتم تعبئة المحتوى بواسطة JavaScript -->
-            </div>
-        </div>
-    </div>
-
-    <!-- زر العودة للأعلى -->
-    <button class="scroll-top" id="scroll-top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <!-- تحميل البيانات والوظائف -->
-    <script src="data.js"></script>
-    <script src="script.js"></script>
-    <script>
-        // تهيئة صفحة القسم
-        document.addEventListener('DOMContentLoaded', function() {
-            // إخفاء شاشة التحميل بعد 1 ثانية
-            setTimeout(() => {
-                document.getElementById('loading-screen').style.display = 'none';
-            }, 1000);
-            
-            loadSectionPage();
-            setupMobileMenu();
-            setupScrollTop();
-            setupThemeToggle();
-            setupViewToggle();
-            setupAnimations();
-        });
-    </script>
-</body>
-</html>
+                            <div class="stat-content">
+                                <div class="stat-number" id="products-count">0</div>
+                                <div class="stat-label">منتج
