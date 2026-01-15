@@ -2,225 +2,314 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>ترند كارد - Trend Card | أفضل منصة للشحن والبطاقات</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💎</text></svg>">
 </head>
 <body>
-    <!-- شريط التحميل -->
+    <!-- شاشة التحميل -->
     <div class="loading-screen" id="loading-screen">
         <div class="loader">
             <div class="loader-circle"></div>
-            <p>ترند كارد</p>
+            <p class="loader-text">ترند كارد</p>
         </div>
     </div>
 
-    <!-- رأس الصفحة -->
-    <header class="header">
+    <!-- شريط التنقل العلوي -->
+    <header class="header" id="header">
         <div class="container">
-            <div class="header-content">
+            <div class="header-inner">
+                <!-- الشعار -->
                 <div class="logo">
-                    <div class="logo-icon">
-                        <i class="fas fa-gem"></i>
-                    </div>
-                    <div class="logo-text">
-                        <h1 class="logo-title">TREND CARD</h1>
-                        <p class="logo-subtitle">نرند دگارد</p>
-                    </div>
-                </div>
-                
-                <nav class="navbar">
-                    <ul class="nav-menu">
-                        <li class="nav-item"><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> الرئيسية</a></li>
-                        <li class="nav-item"><a href="#features" class="nav-link"><i class="fas fa-star"></i> المميزات</a></li>
-                        <li class="nav-item"><a href="#contact" class="nav-link"><i class="fas fa-phone-alt"></i> اتصل بنا</a></li>
-                    </ul>
-                    
-                    <div class="theme-toggle">
-                        <i class="fas fa-moon"></i>
-                    </div>
-                    
-                    <div class="mobile-menu-btn">
-                        <div class="hamburger">
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                    <a href="index.html" class="logo-link">
+                        <div class="logo-icon">
+                            <i class="fas fa-gem"></i>
                         </div>
-                    </div>
+                        <div class="logo-text">
+                            <h1 class="logo-title">TREND CARD</h1>
+                            <span class="logo-subtitle">نرند دگارد</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- قائمة التنقل -->
+                <nav class="nav" id="nav">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="index.html" class="nav-link active"><i class="fas fa-home"></i><span>الرئيسية</span></a></li>
+                        <li class="nav-item"><a href="#sections" class="nav-link"><i class="fas fa-th-large"></i><span>الأقسام</span></a></li>
+                        <li class="nav-item"><a href="#features" class="nav-link"><i class="fas fa-star"></i><span>المميزات</span></a></li>
+                        <li class="nav-item"><a href="#contact" class="nav-link"><i class="fas fa-phone-alt"></i><span>اتصل بنا</span></a></li>
+                    </ul>
                 </nav>
+
+                <!-- أزرار التحكم -->
+                <div class="header-controls">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="تبديل المظهر">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    
+                    <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="فتح القائمة">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- القسم البطولي -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content animate__animated animate__fadeInUp">
-                <div class="hero-text">
-                    <div class="badge">
-                        <span>الأفضل في السوق</span>
+    <!-- القسم الرئيسي -->
+    <main class="main-content">
+        <!-- قسم البطل -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <div class="hero-badge">
+                            <span class="badge-text">🚀 الأفضل في السوق</span>
+                        </div>
+                        
+                        <h1 class="hero-title">
+                            أسرع وأضمن منصة 
+                            <span class="text-gradient">لشحن الرصيد</span> 
+                            والبطاقات
+                        </h1>
+                        
+                        <p class="hero-description">
+                            اشترِ بطاقات الألعاب، شحن التطبيقات، وبطاقات الهدايا بأسعار تنافسية 
+                            وسرعة فائقة في التنفيذ مع دعم فني على مدار الساعة.
+                        </p>
+                        
+                        <div class="hero-actions">
+                            <a href="#sections" class="btn btn-primary btn-large">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>تصفح الأقسام</span>
+                            </a>
+                            <a href="#contact" class="btn btn-outline btn-large">
+                                <i class="fas fa-headset"></i>
+                                <span>تواصل معنا</span>
+                            </a>
+                        </div>
+                        
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">+10K</div>
+                                <div class="stat-label">عميل راضي</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">24/7</div>
+                                <div class="stat-label">دعم فني</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">فوري</div>
+                                <div class="stat-label">شحن فوري</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">100%</div>
+                                <div class="stat-label">آمن</div>
+                            </div>
+                        </div>
                     </div>
-                    <h2 class="hero-title">أسرع وأضمن منصة <span class="highlight">لشحن الرصيد</span> والبطاقات</h2>
-                    <p class="hero-description">اشترِ بطاقات الألعاب، شحن التطبيقات، وبطاقات الهدايا بأسعار تنافسية وسرعة فائقة في التنفيذ مع دعم فني على مدار الساعة.</p>
                     
-                    <div class="hero-stats">
-                        <div class="stat">
-                            <div class="stat-number">10,000+</div>
-                            <div class="stat-text">عميل راضي</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">24/7</div>
-                            <div class="stat-text">دعم فني</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">فوري</div>
-                            <div class="stat-text">شحن فوري</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="hero-image">
-                    <div class="image-container">
-                        <div class="floating-card card-1">
-                            <i class="fas fa-gamepad"></i>
-                            <span>ألعاب</span>
-                        </div>
-                        <div class="floating-card card-2">
-                            <i class="fas fa-mobile-alt"></i>
-                            <span>تطبيقات</span>
-                        </div>
-                        <div class="floating-card card-3">
-                            <i class="fas fa-gift"></i>
-                            <span>هدايا</span>
-                        </div>
-                        <div class="main-image">
-                            <div class="image-frame">
-                                <img src="https://i.ibb.co/rRq8TGwg/image.jpg" alt="ترند كارد" class="hero-img">
+                    <div class="hero-visual">
+                        <div class="visual-container">
+                            <div class="floating-element el-1">
+                                <i class="fas fa-gamepad"></i>
+                                <span>ألعاب</span>
+                            </div>
+                            <div class="floating-element el-2">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>تطبيقات</span>
+                            </div>
+                            <div class="floating-element el-3">
+                                <i class="fas fa-gift"></i>
+                                <span>هدايا</span>
+                            </div>
+                            
+                            <div class="main-visual">
+                                <div class="visual-frame">
+                                    <img src="https://i.ibb.co/rRq8TGwg/image.jpg" 
+                                         alt="ترند كارد" 
+                                         class="visual-image"
+                                         loading="lazy">
+                                    <div class="visual-overlay"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        
-        <!-- موجات الخلفية -->
-        <div class="wave wave-1"></div>
-        <div class="wave wave-2"></div>
-        <div class="wave wave-3"></div>
-    </section>
-
-    <!-- أقسام الموقع -->
-    <section class="sections" id="sections">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title animate__animated animate__fadeInDown">أقسام <span class="highlight">ترند كارد</span></h2>
-                <p class="section-subtitle">اختر القسم المناسب لك واستمتع بأفضل العروض والخدمات</p>
-            </div>
             
-            <div class="sections-grid" id="sections-container">
-                <!-- سيتم تعبئة الأقسام بواسطة JavaScript -->
-            </div>
-        </div>
-    </section>
+            <!-- موجات الخلفية -->
+            <div class="wave wave-bottom"></div>
+        </section>
 
-    <!-- المميزات -->
-    <section class="features" id="features">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title animate__animated animate__fadeInDown">لماذا تختار <span class="highlight">ترند كارد</span>؟</h2>
-                <p class="section-subtitle">نقدم أفضل الخدمات بأعلى معايير الجودة والأمان</p>
-            </div>
-            
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <h3 class="feature-title">شحن فوري</h3>
-                    <p class="feature-description">شحن فوري بعد التأكد من الدفع مباشرة دون أي انتظار</p>
+        <!-- أقسام الموقع -->
+        <section class="sections-section" id="sections">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="title-text">أقسام</span>
+                        <span class="title-gradient">ترند كارد</span>
+                    </h2>
+                    <p class="section-subtitle">
+                        اختر القسم المناسب لك واستمتع بأفضل العروض والخدمات
+                    </p>
                 </div>
                 
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3 class="feature-title">آمن 100%</h3>
-                    <p class="feature-description">معاملات آمنة ومضمونة مع حماية كاملة لبياناتك</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3 class="feature-title">دعم فني 24/7</h3>
-                    <p class="feature-description">دعم فني على مدار الساعة طوال أيام الأسبوع</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-tags"></i>
-                    </div>
-                    <h3 class="feature-title">أسعار منافسة</h3>
-                    <p class="feature-description">أفضل الأسعار في السوق مع عروض وتخفيضات مستمرة</p>
+                <div class="sections-grid" id="sections-container">
+                    <!-- سيتم تعبئة الأقسام بواسطة JavaScript -->
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- كيفية الطلب -->
-    <section class="how-to-order">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title animate__animated animate__fadeInDown">كيفية <span class="highlight">الطلب</span></h2>
-                <p class="section-subtitle">4 خطوات بسيطة فقط للحصول على منتجك</p>
+        <!-- المميزات -->
+        <section class="features-section" id="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="title-text">لماذا تختار</span>
+                        <span class="title-gradient">ترند كارد؟</span>
+                    </h2>
+                    <p class="section-subtitle">
+                        نقدم أفضل الخدمات بأعلى معايير الجودة والأمان
+                    </p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3 class="feature-title">شحن فوري</h3>
+                        <p class="feature-description">
+                            شحن فوري بعد التأكد من الدفع مباشرة دون أي انتظار
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="feature-title">آمن 100%</h3>
+                        <p class="feature-description">
+                            معاملات آمنة ومضمونة مع حماية كاملة لبياناتك
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3 class="feature-title">دعم فني 24/7</h3>
+                        <p class="feature-description">
+                            دعم فني على مدار الساعة طوال أيام الأسبوع
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-tags"></i>
+                        </div>
+                        <h3 class="feature-title">أسعار منافسة</h3>
+                        <p class="feature-description">
+                            أفضل الأسعار في السوق مع عروض وتخفيضات مستمرة
+                        </p>
+                    </div>
+                </div>
             </div>
-            
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3>اختر المنتج</h3>
-                        <p>تصفح الأقسام واختر المنتج المناسب</p>
-                    </div>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3>أدخل البيانات</h3>
-                        <p>أدخل الكمية أو الفئة ورقم حسابك</p>
-                    </div>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3>اطلب عبر واتساب</h3>
-                        <p>اضغط على زر الطلب ليتم تحويلك لواتساب</p>
-                    </div>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
-                        <h3>استلم منتجك</h3>
-                        <p>ستصلك الشحنة فور تأكيد الطلب</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- تذييل الصفحة -->
+        <!-- كيفية الطلب -->
+        <section class="steps-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="title-text">كيفية</span>
+                        <span class="title-gradient">الطلب</span>
+                    </h2>
+                    <p class="section-subtitle">
+                        4 خطوات بسيطة فقط للحصول على منتجك
+                    </p>
+                </div>
+                
+                <div class="steps-container">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3 class="step-title">اختر المنتج</h3>
+                            <p class="step-description">تصفح الأقسام واختر المنتج المناسب</p>
+                        </div>
+                        <div class="step-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3 class="step-title">أدخل البيانات</h3>
+                            <p class="step-description">أدخل الكمية أو الفئة ورقم حسابك</p>
+                        </div>
+                        <div class="step-icon">
+                            <i class="fas fa-edit"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3 class="step-title">اطلب عبر واتساب</h3>
+                            <p class="step-description">اضغط على زر الطلب ليتم تحويلك لواتساب</p>
+                        </div>
+                        <div class="step-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3 class="step-title">استلم منتجك</h3>
+                            <p class="step-description">ستصلك الشحنة فور تأكيد الطلب</p>
+                        </div>
+                        <div class="step-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم CTA -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">جاهز للبدء؟</h2>
+                    <p class="cta-description">
+                        ابدأ الآن بشراء أول منتج لك واستمتع بأفضل الخدمات
+                    </p>
+                    <a href="#sections" class="btn btn-primary btn-large btn-glow">
+                        <i class="fas fa-rocket"></i>
+                        <span>ابدأ التسوق الآن</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- التذييل -->
     <footer class="footer" id="contact">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
+            <div class="footer-grid">
+                <!-- معلومات الشركة -->
+                <div class="footer-col footer-about">
                     <div class="footer-logo">
                         <div class="logo-icon">
                             <i class="fas fa-gem"></i>
@@ -230,59 +319,126 @@
                             <p>Trend Card</p>
                         </div>
                     </div>
-                    <p class="footer-description">منصة رائدة في شحن الرصيد والبطاقات الرقمية بسرعة وأمان</p>
+                    <p class="footer-about-text">
+                        منصة رائدة في شحن الرصيد والبطاقات الرقمية بسرعة وأمان. 
+                        نقدم خدماتنا منذ 2023 ونسعى لتحقيق رضا عملائنا.
+                    </p>
                     
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/967735670700" class="social-link" aria-label="واتساب">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="تيليجرام">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="إنستجرام">
+                            <i class="fab fa-instagram"></i>
+                        </a>
                     </div>
                 </div>
                 
-                <div class="footer-section">
+                <!-- روابط سريعة -->
+                <div class="footer-col">
                     <h4 class="footer-title">روابط سريعة</h4>
                     <ul class="footer-links">
-                        <li><a href="index.html">الرئيسية</a></li>
-                        <li><a href="#sections">الأقسام</a></li>
-                        <li><a href="#features">المميزات</a></li>
-                        <li><a href="#contact">اتصل بنا</a></li>
+                        <li><a href="index.html"><i class="fas fa-chevron-left"></i> الرئيسية</a></li>
+                        <li><a href="#sections"><i class="fas fa-chevron-left"></i> الأقسام</a></li>
+                        <li><a href="#features"><i class="fas fa-chevron-left"></i> المميزات</a></li>
+                        <li><a href="index.html#contact"><i class="fas fa-chevron-left"></i> اتصل بنا</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-section">
+                <!-- معلومات الاتصال -->
+                <div class="footer-col">
                     <h4 class="footer-title">اتصل بنا</h4>
                     <div class="contact-info">
                         <div class="contact-item">
-                            <i class="fab fa-whatsapp"></i>
-                            <div>
-                                <p>واتساب للطلبات</p>
-                                <a href="https://wa.me/967735670700" class="contact-link">+967735670700</a>
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-details">
+                                <p class="contact-label">واتساب للطلبات</p>
+                                <a href="https://wa.me/967735670700" class="contact-value">+967 735 670 700</a>
                             </div>
                         </div>
                         
                         <div class="contact-item">
-                            <i class="far fa-clock"></i>
-                            <div>
-                                <p>أوقات العمل</p>
-                                <span>24 ساعة / 7 أيام</span>
+                            <div class="contact-icon">
+                                <i class="far fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <p class="contact-label">أوقات العمل</p>
+                                <span class="contact-value">24 ساعة / 7 أيام</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div class="contact-details">
+                                <p class="contact-label">الدعم الفني</p>
+                                <span class="contact-value">متاح على مدار الساعة</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- قسم إضافي -->
+                <div class="footer-col">
+                    <h4 class="footer-title">المزيد</h4>
+                    <div class="footer-extra">
+                        <div class="payment-methods">
+                            <p class="extra-title">طرق الدفع المقبولة:</p>
+                            <div class="payment-icons">
+                                <i class="fas fa-money-bill-wave" title="نقدي"></i>
+                                <i class="fas fa-credit-card" title="بطاقة ائتمان"></i>
+                                <i class="fas fa-mobile-alt" title="محفظة إلكترونية"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="newsletter">
+                            <p class="extra-title">اشترك في النشرة الإخبارية</p>
+                            <div class="newsletter-form">
+                                <input type="email" placeholder="بريدك الإلكتروني" class="newsletter-input">
+                                <button class="newsletter-btn" aria-label="اشتراك">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             
+            <!-- حقوق النشر -->
             <div class="footer-bottom">
-                <p class="copyright">© 2023 ترند كارد - Trend Card. جميع الحقوق محفوظة.</p>
+                <div class="container">
+                    <div class="footer-bottom-content">
+                        <p class="copyright">
+                            © <span id="current-year">2024</span> ترند كارد - Trend Card. جميع الحقوق محفوظة.
+                        </p>
+                        <div class="footer-bottom-links">
+                            <a href="#" class="footer-bottom-link">سياسة الخصوصية</a>
+                            <a href="#" class="footer-bottom-link">الشروط والأحكام</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- نافذة المنتج العائمة -->
-    <div class="modal-overlay" id="product-modal">
+    <!-- زر العودة للأعلى -->
+    <button class="scroll-top-btn" id="scroll-top-btn" aria-label="العودة للأعلى">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- نافذة المنتج -->
+    <div class="product-modal" id="product-modal">
+        <div class="modal-overlay"></div>
         <div class="modal-container">
             <div class="modal-header">
-                <h3 id="modal-title">تفاصيل المنتج</h3>
-                <button class="close-modal" id="close-modal">
+                <h3 class="modal-title" id="modal-title">تفاصيل المنتج</h3>
+                <button class="modal-close" id="modal-close" aria-label="إغلاق">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
@@ -292,27 +448,28 @@
         </div>
     </div>
 
-    <!-- زر العودة للأعلى -->
-    <button class="scroll-top" id="scroll-top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
     <!-- تحميل البيانات والوظائف -->
     <script src="data.js"></script>
     <script src="script.js"></script>
     <script>
         // تهيئة الصفحة الرئيسية
         document.addEventListener('DOMContentLoaded', function() {
+            // تعيين سنة حقوق النشر
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+            
             // إخفاء شاشة التحميل بعد 1.5 ثانية
             setTimeout(() => {
-                document.getElementById('loading-screen').style.display = 'none';
+                document.getElementById('loading-screen').style.opacity = '0';
+                setTimeout(() => {
+                    document.getElementById('loading-screen').style.display = 'none';
+                }, 500);
             }, 1500);
             
+            // تحميل الأقسام
             loadSections();
-            setupMobileMenu();
-            setupScrollTop();
-            setupThemeToggle();
-            setupAnimations();
+            
+            // تهيئة الموقع
+            initApp();
         });
     </script>
 </body>
