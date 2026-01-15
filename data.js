@@ -5,6 +5,8 @@ const sections = [
         name: "شحن التطبيقات",
         description: "شحن رصيد للتطبيقات المختلفة بسهولة وأمان",
         image: "https://i.ibb.co/rRq8TGwg/image.jpg",
+        icon: "fas fa-mobile-alt",
+        color: "blue",
         products: [1, 2]
     },
     {
@@ -12,6 +14,8 @@ const sections = [
         name: "شحن الألعاب",
         description: "شحن رصيد لأشهر الألعاب الإلكترونية",
         image: "https://i.ibb.co/rRq8TGwg/image.jpg",
+        icon: "fas fa-gamepad",
+        color: "purple",
         products: [3, 4, 5]
     },
     {
@@ -19,13 +23,17 @@ const sections = [
         name: "بطاقات الهدايا",
         description: "بطاقات هدايا رقمية متعددة المنصات",
         image: "https://i.ibb.co/rRq8TGwg/image.jpg",
+        icon: "fas fa-gift",
+        color: "pink",
         products: [6, 7]
     },
     {
         id: 4,
-        name: "قسم إضافي",
+        name: "منتجات متنوعة",
         description: "منتجات وعروض إضافية متنوعة",
         image: "https://i.ibb.co/rRq8TGwg/image.jpg",
+        icon: "fas fa-ellipsis-h",
+        color: "teal",
         products: [8]
     }
 ];
@@ -44,7 +52,8 @@ const products = [
         minQuantity: 1000,
         maxQuantity: 10000,
         defaultQuantity: 1000,
-        currency: "USD"
+        currency: "USD",
+        badge: "الأكثر مبيعاً"
     },
     {
         id: 2,
@@ -58,7 +67,8 @@ const products = [
         minQuantity: 500,
         maxQuantity: 5000,
         defaultQuantity: 500,
-        currency: "USD"
+        currency: "USD",
+        badge: "جديد"
     },
     {
         id: 3,
@@ -75,7 +85,8 @@ const products = [
             { id: 4, name: "600 شدة", price: 7.99 }
         ],
         defaultCategory: 1,
-        currency: "USD"
+        currency: "USD",
+        badge: "عرض خاص"
     },
     {
         id: 4,
@@ -164,3 +175,11 @@ const exchangeRate = {
 
 // رقم واتساب
 const whatsappNumber = "+967735670700";
+
+// بيانات الألوان حسب القسم
+const sectionColors = {
+    blue: { primary: "#3b82f6", secondary: "rgba(59, 130, 246, 0.1)" },
+    purple: { primary: "#8b5cf6", secondary: "rgba(139, 92, 246, 0.1)" },
+    pink: { primary: "#ec4899", secondary: "rgba(236, 72, 153, 0.1)" },
+    teal: { primary: "#14b8a6", secondary: "rgba(20, 184, 166, 0.1)" }
+};
