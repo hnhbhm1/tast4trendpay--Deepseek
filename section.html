@@ -102,4 +102,348 @@
                             </div>
                             <div class="stat-content">
                                 <div class="stat-number" id="products-count">0</div>
-                                <div class="stat-label">منتج
+                                <div class="stat-label">منتج</div>
+                            </div>
+                        </div>
+                        <div class="page-stat">
+                            <div class="stat-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number">4.9</div>
+                                <div class="stat-label">تقييم</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- أدوات التحكم -->
+        <section class="controls-section">
+            <div class="container">
+                <div class="controls-grid">
+                    <!-- شريط البحث -->
+                    <div class="search-container">
+                        <div class="search-box">
+                            <input type="search" 
+                                   id="search-input" 
+                                   class="search-input" 
+                                   placeholder="ابحث عن منتج..." 
+                                   aria-label="بحث عن منتج">
+                            <button type="button" id="search-btn" class="search-btn" aria-label="بحث">
+                                <i class="fas fa-search"></i>
+                            </button>
+                            <button type="button" id="clear-search" class="clear-search" aria-label="مسح البحث">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- أدوات التصفية والترتيب -->
+                    <div class="filter-controls">
+                        <!-- ترتيب النتائج -->
+                        <div class="sort-container">
+                            <label for="sort-select" class="sort-label">
+                                <i class="fas fa-sort-amount-down"></i>
+                                ترتيب حسب:
+                            </label>
+                            <select id="sort-select" class="sort-select" aria-label="ترتيب النتائج">
+                                <option value="default">الترتيب الافتراضي</option>
+                                <option value="number-asc">رقم المنتج (تصاعدي)</option>
+                                <option value="number-desc">رقم المنتج (تنازلي)</option>
+                                <option value="price-asc">السعر (من الأقل للأعلى)</option>
+                                <option value="price-desc">السعر (من الأعلى للأقل)</option>
+                            </select>
+                        </div>
+                        
+                        <!-- عرض النتائج -->
+                        <div class="view-container">
+                            <span class="view-label">العرض:</span>
+                            <div class="view-buttons">
+                                <button type="button" class="view-btn active" data-view="grid" aria-label="عرض شبكي">
+                                    <i class="fas fa-th"></i>
+                                </button>
+                                <button type="button" class="view-btn" data-view="list" aria-label="عرض قائمة">
+                                    <i class="fas fa-list"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- عدد النتائج -->
+                        <div class="results-count">
+                            <span id="results-text">0 منتج</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- المنتجات -->
+        <section class="products-section">
+            <div class="container">
+                <!-- رسالة التحميل -->
+                <div class="loading-products" id="loading-products">
+                    <div class="loading-spinner"></div>
+                    <p>جاري تحميل المنتجات...</p>
+                </div>
+                
+                <!-- المنتجات -->
+                <div class="products-container" id="products-container">
+                    <!-- سيتم تعبئة المنتجات بواسطة JavaScript -->
+                </div>
+                
+                <!-- رسالة عدم العثور على منتجات -->
+                <div class="no-results" id="no-results">
+                    <div class="no-results-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="no-results-title">لم يتم العثور على منتجات</h3>
+                    <p class="no-results-text">
+                        لم نتمكن من العثور على منتجات تطابق بحثك. حاول البحث باستخدام مصطلحات أخرى.
+                    </p>
+                    <button class="btn btn-outline" id="reset-filters">
+                        <i class="fas fa-redo"></i>
+                        <span>إعادة تعيين الفلاتر</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- وصف إضافي (للقسم الأول فقط) -->
+        <section class="extra-description" id="yoyo-description">
+            <div class="container">
+                <div class="description-card">
+                    <div class="description-header">
+                        <h3 class="description-title">
+                            <i class="fas fa-info-circle"></i>
+                            شحن يويو YOYO
+                        </h3>
+                        <div class="description-badge">
+                            <span>الأكثر طلباً</span>
+                        </div>
+                    </div>
+                    <div class="description-content">
+                        <p class="description-text">
+                            شحن يويو YOYO بسهولة وأمان مع ترند كارد تطبيق يويو هو منصة ترفيهية 
+                            للدردشة والتواصل الاجتماعي، ويمكنك الآن شراء وشحن رصيد يويو مباشرة 
+                            بخطوات بسيطة وسريعة على مدار الساعة.
+                        </p>
+                        
+                        <div class="description-features">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4 class="feature-title">شحن فوري</h4>
+                                    <p class="feature-text">شحن فوري بعد التأكيد مباشرة</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4 class="feature-title">أسعار تنافسية</h4>
+                                    <p class="feature-text">أفضل الأسعار في السوق</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4 class="feature-title">دعم فني متخصص</h4>
+                                    <p class="feature-text">دعم فني على مدار الساعة</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم CTA -->
+        <section class="section-cta">
+            <div class="container">
+                <div class="cta-card">
+                    <div class="cta-content">
+                        <h2 class="cta-title">تواجه مشكلة؟</h2>
+                        <p class="cta-text">
+                            فريق الدعم الفني لدينا جاهز لمساعدتك على مدار الساعة
+                        </p>
+                    </div>
+                    <div class="cta-actions">
+                        <a href="https://wa.me/967735670700" class="btn btn-primary btn-large">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>تواصل عبر واتساب</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- التذييل -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- معلومات الشركة -->
+                <div class="footer-col footer-about">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <div class="footer-logo-text">
+                            <h3>ترند كارد</h3>
+                            <p>Trend Card</p>
+                        </div>
+                    </div>
+                    <p class="footer-about-text">
+                        منصة رائدة في شحن الرصيد والبطاقات الرقمية بسرعة وأمان. 
+                        نقدم خدماتنا منذ 2023 ونسعى لتحقيق رضا عملائنا.
+                    </p>
+                    
+                    <div class="social-links">
+                        <a href="https://wa.me/967735670700" class="social-link" aria-label="واتساب">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="تيليجرام">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="إنستجرام">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- روابط سريعة -->
+                <div class="footer-col">
+                    <h4 class="footer-title">روابط سريعة</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-left"></i> الرئيسية</a></li>
+                        <li><a href="index.html#sections"><i class="fas fa-chevron-left"></i> الأقسام</a></li>
+                        <li><a href="index.html#features"><i class="fas fa-chevron-left"></i> المميزات</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-left"></i> اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <!-- معلومات الاتصال -->
+                <div class="footer-col">
+                    <h4 class="footer-title">اتصل بنا</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-details">
+                                <p class="contact-label">واتساب للطلبات</p>
+                                <a href="https://wa.me/967735670700" class="contact-value">+967 735 670 700</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="far fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <p class="contact-label">أوقات العمل</p>
+                                <span class="contact-value">24 ساعة / 7 أيام</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div class="contact-details">
+                                <p class="contact-label">الدعم الفني</p>
+                                <span class="contact-value">متاح على مدار الساعة</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- قسم إضافي -->
+                <div class="footer-col">
+                    <h4 class="footer-title">المزيد</h4>
+                    <div class="footer-extra">
+                        <div class="payment-methods">
+                            <p class="extra-title">طرق الدفع المقبولة:</p>
+                            <div class="payment-icons">
+                                <i class="fas fa-money-bill-wave" title="نقدي"></i>
+                                <i class="fas fa-credit-card" title="بطاقة ائتمان"></i>
+                                <i class="fas fa-mobile-alt" title="محفظة إلكترونية"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- حقوق النشر -->
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="footer-bottom-content">
+                        <p class="copyright">
+                            © <span id="current-year">2024</span> ترند كارد - Trend Card. جميع الحقوق محفوظة.
+                        </p>
+                        <div class="footer-bottom-links">
+                            <a href="#" class="footer-bottom-link">سياسة الخصوصية</a>
+                            <a href="#" class="footer-bottom-link">الشروط والأحكام</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- زر العودة للأعلى -->
+    <button class="scroll-top-btn" id="scroll-top-btn" aria-label="العودة للأعلى">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- نافذة المنتج -->
+    <div class="product-modal" id="product-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modal-title">تفاصيل المنتج</h3>
+                <button class="modal-close" id="modal-close" aria-label="إغلاق">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- سيتم تعبئة المحتوى بواسطة JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- تحميل البيانات والوظائف -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // تهيئة صفحة القسم
+        document.addEventListener('DOMContentLoaded', function() {
+            // تعيين سنة حقوق النشر
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+            
+            // إخفاء شاشة التحميل بعد 1 ثانية
+            setTimeout(() => {
+                document.getElementById('loading-screen').style.opacity = '0';
+                setTimeout(() => {
+                    document.getElementById('loading-screen').style.display = 'none';
+                }, 500);
+            }, 1000);
+            
+            // تحميل صفحة القسم
+            loadSectionPage();
+            
+            // تهيئة الموقع
+            initApp();
+        });
+    </script>
+</body>
+</html>
